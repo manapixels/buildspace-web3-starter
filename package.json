@@ -1,17 +1,50 @@
 {
-  "name": "buildspace-try",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "devDependencies": {
-    "@nomiclabs/hardhat-ethers": "^2.0.0",
-    "@nomiclabs/hardhat-waffle": "^2.0.0",
-    "chai": "^4.2.0",
-    "ethereum-waffle": "^3.0.0",
-    "ethers": "^5.0.0",
-    "hardhat": "^2.6.7"
-  },
-  "dependencies": {
-    "dotenv": "^10.0.0"
+    "name": "@buildspace-tutorials/monorepo",
+    "version": "1.0.0",
+    "keywords": [
+      "ethereum",
+      "react",
+      "workspaces",
+      "yarn"
+    ],
+    "private": true,
+    "scripts": {
+      "react-app:build": "yarn workspace @buildspace-tutorials/react-app build --max-old-space-size=12288",
+      "react-app:eject": "yarn workspace @buildspace-tutorials/react-app eject",
+      "react-app:start": "yarn workspace @buildspace-tutorials/react-app start",
+      "react-app:test": "yarn workspace @buildspace-tutorials/react-app test",
+      "build": "yarn workspace @buildspace-tutorials/react-app build --max-old-space-size=12288",
+      "prettier": "yarn workspace @buildspace-tutorials/react-app prettier",
+      "chain": "yarn workspace @buildspace-tutorials/hardhat chain",
+      "fork": "yarn workspace @buildspace-tutorials/hardhat fork",
+      "node": "yarn workspace @buildspace-tutorials/hardhat chain",
+      "test": "yarn workspace @buildspace-tutorials/hardhat test",
+      "start": "yarn workspace @buildspace-tutorials/react-app start",
+      "compile": "yarn workspace @buildspace-tutorials/hardhat compile",
+      "deploy": "yarn workspace @buildspace-tutorials/hardhat deploy",
+      "watch": "yarn workspace @buildspace-tutorials/hardhat watch",
+      "accounts": "yarn workspace @buildspace-tutorials/hardhat accounts",
+      "balance": "yarn workspace @buildspace-tutorials/hardhat balance",
+      "send": "yarn workspace @buildspace-tutorials/hardhat send",
+      "ipfs": "yarn workspace @buildspace-tutorials/react-app ipfs",
+      "surge": "yarn workspace @buildspace-tutorials/react-app surge",
+      "generate": "yarn workspace @buildspace-tutorials/hardhat generate",
+      "account": "yarn workspace @buildspace-tutorials/hardhat account",
+      "mineContractAddress": "cd ./hardhat && npx hardhat mineContractAddress",
+      "wallet": "cd ./hardhat && npx hardhat wallet",
+      "fundedwallet": "cd ./hardhat && npx hardhat fundedwallet",
+      "flatten": "cd ./hardhat && npx hardhat flatten",
+      "clean": "cd ./hardhat && npx hardhat clean"
+    },
+    "workspaces": {
+      "packages": [
+        "packages/*"
+      ],
+      "nohoist": [
+        "**/hardhat",
+        "**/hardhat/**"
+      ]
+    },
+    "dependencies": {},
+    "devDependencies": {}
   }
-}

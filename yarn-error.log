@@ -1,0 +1,86 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js run start
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft VS Code\bin;C:\Windows\SysWow64\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\nodejs\;C:\Users\Zhenyang\.cargo\bin;C:\Users\Zhenyang\.windows-build-tools\python27\;C:\Users\Zhenyang\.windows-build-tools\python27\;C:\Program Files\nodejs\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\Users\Zhenyang\AppData\Roaming\npm\node_modules\windows-build-tools\node_modules\.bin;C:\Users\Zhenyang\AppData\Roaming\npm\node_modules\.bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft VS Code\bin;C:\Windows\SysWow64\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\nodejs\;C:\Users\Zhenyang\AppData\Local\Microsoft\WindowsApps;C:\Users\Zhenyang\AppData\Local\Yarn\bin;C:\Users\Zhenyang\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Exercism
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  14.16.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\Zhenyang\Downloads\Dev\buildspace-tutorials\package.json: Unexpected token } in JSON at position 2130
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+      "name": "@buildspace-tutorials/monorepo",
+      "version": "1.0.0",
+      "keywords": [
+        "ethereum",
+        "react",
+        "workspaces",
+        "yarn"
+      ],
+      "private": true,
+      "scripts": {
+        "react-app:build": "yarn workspace @buildspace-tutorials/react-app build --max-old-space-size=12288",
+        "react-app:eject": "yarn workspace @buildspace-tutorials/react-app eject",
+        "react-app:start": "yarn workspace @buildspace-tutorials/react-app start",
+        "react-app:test": "yarn workspace @buildspace-tutorials/react-app test",
+        "build": "yarn workspace @buildspace-tutorials/react-app build --max-old-space-size=12288",
+        "prettier": "yarn workspace @buildspace-tutorials/react-app prettier",
+        "chain": "yarn workspace @buildspace-tutorials/hardhat chain",
+        "fork": "yarn workspace @buildspace-tutorials/hardhat fork",
+        "node": "yarn workspace @buildspace-tutorials/hardhat chain",
+        "test": "yarn workspace @buildspace-tutorials/hardhat test",
+        "start": "yarn workspace @buildspace-tutorials/react-app start",
+        "compile": "yarn workspace @buildspace-tutorials/hardhat compile",
+        "deploy": "yarn workspace @buildspace-tutorials/hardhat deploy",
+        "watch": "yarn workspace @buildspace-tutorials/hardhat watch",
+        "accounts": "yarn workspace @buildspace-tutorials/hardhat accounts",
+        "balance": "yarn workspace @buildspace-tutorials/hardhat balance",
+        "send": "yarn workspace @buildspace-tutorials/hardhat send",
+        "ipfs": "yarn workspace @buildspace-tutorials/react-app ipfs",
+        "surge": "yarn workspace @buildspace-tutorials/react-app surge",
+        "generate": "yarn workspace @buildspace-tutorials/hardhat generate",
+        "account": "yarn workspace @buildspace-tutorials/hardhat account",
+        "mineContractAddress": "cd packages/hardhat && npx hardhat mineContractAddress",
+        "wallet": "cd packages/hardhat && npx hardhat wallet",
+        "fundedwallet": "cd packages/hardhat && npx hardhat fundedwallet",
+        "flatten": "cd packages/hardhat && npx hardhat flatten",
+        "clean": "cd packages/hardhat && npx hardhat clean",
+      },
+      "workspaces": {
+        "packages": [
+          "packages/*"
+        ],
+        "nohoist": [
+          "**/@graphprotocol/graph-ts",
+          "**/@graphprotocol/graph-ts/**",
+          "**/hardhat",
+          "**/hardhat/**",
+          "**/hardhat-ts",
+          "**/hardhat-ts/**"
+        ]
+      },
+      "dependencies": {},
+      "devDependencies": {
+        "husky": "^7.0.2"
+      }
+    }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

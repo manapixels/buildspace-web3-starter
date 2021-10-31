@@ -20,7 +20,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
    solidity: '0.8.4',
    networks: {
      kovan: {
-       url: 'https://eth-kovan.alchemyapi.io/v2/L-g62EzDgTom85TK1GzMcu0R0lMwctQm',
+       url: process.env.STAGING_ALCHEMY_KEY,
        accounts: [process.env.PRIVATE_KEY],
      },
    },
